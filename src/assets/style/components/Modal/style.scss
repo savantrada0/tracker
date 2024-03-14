@@ -1,0 +1,111 @@
+@import "../../common/variables";
+
+.main_modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    .modal {
+        margin: 0px 15px;
+        border-radius: 8px;
+        background: $light;
+        max-width: 400px;
+        width: 100%;
+        z-index: 13;
+        box-shadow: -4px 0 16px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        .close_button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            width: fit-content;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            button {
+                padding: 0px;
+                line-height: 0;
+                &:active {
+                    background: $light;
+                }
+                svg{
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+        .modal_content_wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 25px 30px;
+            .title {
+                font-size: 0.812rem;
+                padding: 5px 10px;
+                line-height: 1.45;
+                color: $secondary_600;
+                align-self: flex-start;
+                margin-bottom: 10px;
+                background: transparent;
+                cursor: pointer;
+                border-bottom: 1px solid $secondary_600;
+                border-radius: 0;
+                width: min-content;
+                button {
+                    white-space: nowrap;
+                    padding: 0;
+                    &:active {
+                        background: $light;
+                    }
+                }
+            }
+            .bottom_buttons {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+                margin-top: 10px;
+                .action_button {
+                    font-size: 0.850rem;
+                    background: $secondary_400;
+                    button {
+                        padding: 5px 14px;
+                        &:active {
+                            background: transparent;
+                        }
+                    }
+                }
+                .cancel_button {
+                    background: $light;
+                    color: $dark;
+                    border: 1px solid $dark;
+                    font-size: 0.850rem;
+                    button {
+                        padding: 5px 14px;
+                        &:active {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal_overlay {
+        position: fixed;
+        background: $dark;
+        left: 0;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        cursor: pointer;
+        z-index: 12;
+        opacity: 0.5;
+        height: 100%;
+    }
+}

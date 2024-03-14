@@ -1,0 +1,56 @@
+@import "../../common/variables";
+
+.screenshots_container {
+    margin: 30px;
+    border-left: 2px solid $neutrals_400;
+    @media (max-width:$mobile) {
+        margin: 15px;
+    }
+    .wrapper {
+        position: relative;
+        .time_heading {
+            background: $light;
+            display: flex;
+            font-size: 12px;
+            color: $neutrals_600;
+            left: -12px;
+            position: absolute;
+            img {
+                cursor: pointer;
+                width: 14px;
+                margin-right: 8px;
+            }
+        }
+        .cards_container {
+            display: grid;
+            margin-left: 15px;
+            grid-template-columns: repeat(6,1fr);
+            column-gap: 30px;
+            margin-bottom: 30px;
+            @media (max-width:$mobile) {
+                column-gap: 15px;
+            }
+            @media (max-width:1200px) {
+                grid-template-columns: repeat(4,1fr);
+            }
+            @media (max-width:$landspace) {
+                grid-template-columns: repeat(3,1fr);
+            }
+            @media (max-width:$tablet) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            .empty_data {
+                width: 100%;
+                margin-top: 34px;
+                div {
+                    background: $neutrals_300;
+                    color: $neutrals_600;
+                    text-align: center;
+                    font-size: 12px;
+                    border-radius: 2px;
+                    padding: 12px 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import "../../common/variables";
+
+.menu_wrapper {
+    margin-left: 26px;
+    z-index: 7;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 200px;
+    border: none;
+    .menulist_item {
+        display: flex;
+        margin: 8px 0px;
+        cursor: pointer;
+        height: 25px;
+        input[type="radio"] { 
+            opacity: 0;
+            width: -webkit-fill-available;
+            outline: none;
+            border: none;
+            margin: 0px;
+            padding: 0px;
+            z-index: 3;
+            cursor: pointer;
+        }
+        .item_name {
+            font-size: 0.875rem;
+            position: absolute;
+            padding: 4px 0px;
+            padding-left: 10px;
+        }
+    }
+    .list_item_hover {
+        color:  $secondary_400!important;
+    }
+    .menu_select_button {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        .toggle_arrow_button{
+            background: none;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            height: 22px;
+            width: 22px;
+            top: 3px;
+            right: 0px;
+            position: absolute;
+            right: -20px;
+            svg{
+                height: 22px;
+                width: 22px;
+            }
+        }
+        .arrow_button {
+            right: 0;
+            height: 10px;
+            width: 10px;
+        }
+        .list_button {
+            padding: 0px;
+            width: 135px;
+            .top_listitem {
+                line-height: 17px;
+                .menutopinput {
+                    background: transparent;
+                    padding: 0;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}

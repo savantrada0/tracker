@@ -1,0 +1,29 @@
+@import "../../common/variables.scss";
+
+.report_card {
+    border: 1px solid $neutrals_400;
+    max-width: 235px;
+    border-radius: 5px;
+    padding: 20px;
+    @media only screen and (max-width: $tablet) {
+        border-radius: 0px;
+        max-width: 100%;
+        border:none;
+        border-bottom: 1px solid $neutrals_400;
+    }
+    .card_heading {
+        display: flex;
+        justify-content: space-between;
+        .card_name {
+            margin: 0px;
+        }
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+    .card_description {
+        font-size: 12px;
+        color: $neutrals_600;
+    }
+}

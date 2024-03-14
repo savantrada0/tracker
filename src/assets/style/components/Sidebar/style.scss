@@ -1,0 +1,148 @@
+@import '../../common/variables';
+
+.sidebar {
+    background-color: $primary_50;
+    position: relative;
+    overflow-y: auto;
+    position: fixed;
+    width: 244px;
+    height: calc(100vh - 46px);
+    border-right: 1px solid $neutrals_200;
+    @media (max-width: $tablet) {
+        display: none;
+    }
+    .toggle_button {
+        position: fixed;
+        border-radius: 50%;
+        top: 70px;
+        border: 1px solid $neutrals_600;
+        width: 24px;
+        background: $light;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        height: 24px;
+        transform: translateX(50%);
+        align-items: center;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .sidebar_wrapper {
+        padding: 15px 0px;
+        margin: 0;
+        color: $dark;
+        padding: 0;
+        li {
+            margin: 10px 0px;
+            list-style-type: none;
+            .border {
+                position: absolute;
+                width: 3px;
+                background: $secondary_400;
+                height: 27px;
+            }
+            .sidebar_button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                width: -webkit-fill-available;
+                text-align: left;
+                gap: 10px;
+                align-items: self-start;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                }
+                span {
+                    margin-left: 36px;
+                    font-size: 0.875rem;
+                }
+                .menu_name {
+                    color: $secondary_500;
+                }
+            }
+        }
+    }
+}
+
+.sidebar_drawer {
+    display: none;
+    overflow-y: auto;
+    z-index: 10;
+    width: 244px;
+    background-color: $primary_50;
+    position: fixed;
+    height: calc(100vh - 46px);
+    @media (max-width: $tablet) {
+        display: block;
+    }
+    .sidebar_brand_logo {
+        margin: 15px 25px;
+        justify-content: center;
+        display: flex;
+        img {
+            width: 150px;
+        }
+    }
+    .sidebar_wrapper {
+        padding-bottom: 15px;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 10px 0px;
+            list-style-type: none;
+            .border {
+                position: absolute;
+                width: 3px;
+                background: $secondary_400;
+                height: 27px;
+            }
+            .sidebar_button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                width: -webkit-fill-available;
+                text-align: left;
+                gap: 10px;
+                align-items: self-start;
+                img {
+                    width: 16px;
+                    position: absolute;
+                    height: 16px;
+                }
+                span {
+                    margin-left: 36px;
+                }
+            }
+            .sidebar_drawer_button {
+                margin: 10px 30px;
+                padding: 5px 0px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                width: -webkit-fill-available;
+                text-align: left;
+                gap: 10px;
+                align-items: center;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+                span {
+                    margin-left: 10px;
+                }
+                .menu_name {
+                    color: $secondary_500;
+                }
+            }
+        }
+    }
+}

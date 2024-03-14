@@ -1,0 +1,58 @@
+@import "../../../common/variables";
+
+.signin_page {
+	min-height: 700px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.signin_container {
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 30px 24px;
+		border-radius: 16px;
+		@media (max-width: $tablet) {
+			padding: 15px;
+		}
+		.heading_1 {
+			margin-bottom: 36px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 32px;
+			color:$dark
+		}
+		.password_input_wrapper_column {
+			margin-top: 24px;
+			label {
+				font-size: 0.875rem;
+			}
+		}
+		.email_input_wrapper_column {
+			label {
+				font-size: 0.875rem;
+			}
+		}
+		.button_wrapper {
+			&.login_button {
+				margin-top: 24px;
+			}
+		}
+		.forget_password {
+			font-size: 0.875rem;
+			color: $primary_800;
+			text-align: center;
+			display: block;
+			margin-top: 24px;
+			a {
+				font-weight: 400;
+				font-size: 0.875rem;
+				line-height: 17px;
+				color: $primary_500;
+				text-decoration: none;
+				margin-left: 4px;
+			}
+		}
+	}
+}

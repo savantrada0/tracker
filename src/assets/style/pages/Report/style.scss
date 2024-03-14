@@ -1,0 +1,88 @@
+@import "../../common/variables";
+
+.reports {
+    .heading {
+        display: flex;
+        padding: 30px 30px 0px 30px;
+        width: 100%;
+        justify-content: space-between;
+        @media only screen and (max-width: $tablet) {
+            gap: 15px;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 30px 15px 0px 15px;                                                              
+        }
+        .heading_button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: $secondary_400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            img {
+                height: 16px;
+                width: 16px;
+            }
+            span {
+                &:hover{
+                    color: $dark;
+                }
+            }
+        }
+    }
+    .report {
+        margin: 30px;
+        @media only screen and (max-width: $report_card) {
+            margin: 15px;
+        }
+        .report_heading {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            img{
+                height: 16px;
+                width: 16px;
+            }
+        }
+        .report_card_wrapper{
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(4,1fr);
+            margin-right: 152px;
+            border-radius: 8px;
+            .report_card:last-child{
+                @media only screen and (max-width: $tablet) {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+            }
+            @media only screen and (max-width: $report_card) {
+                grid-template-columns: repeat(3,1fr);
+            }
+            @media only screen and (max-width: 1024px) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media only screen and (max-width: $tablet) {
+                grid-template-columns: repeat(1,1fr);
+                gap: 0;
+                width: 100%;
+                border-top: 1px solid $neutrals_400;
+                border-right: 1px solid $neutrals_400;
+                border-left: 1px solid $neutrals_400;
+            }
+            .card{
+                @media only screen and (max-width: $tablet) {
+                    max-width: 100%;
+                    border-bottom: none;
+                }
+                .card_heading{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

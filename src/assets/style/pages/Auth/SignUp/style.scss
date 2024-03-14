@@ -1,0 +1,40 @@
+@import '../../../common/variables';
+
+.signup_page {
+	min-height: 700px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.signup_container {
+		.back_to_login {
+			margin-bottom: 24px;
+			color:$dark;
+			.back_to_login__button {
+				width: fit-content;
+				color: inherit;
+				&:hover {
+					color: $primary_500;
+				}
+			}
+		}
+		.logo {
+			max-width: 200px;
+			width: 100%;
+			object-fit: contain;
+		}
+		.heading_1 {
+			margin-top: 24px;
+			margin-bottom: 48px;
+		}
+		.input_wrapper_column {
+			margin-bottom: 24px;
+		}
+		.email_input_wrapper_column {
+			margin-bottom: 24px;
+		}
+		.password_input_wrapper_column {
+			margin-bottom: 24px;
+		}
+	}
+}

@@ -1,0 +1,141 @@
+@import "../../common/variables";
+
+.clients {
+    .nodata_client {
+        margin: 0px 30px 30px 30px;
+    }
+    .tabs_container {
+        margin: 0px 30px 30px 30px;
+        .tabs {
+            background: $light;
+            .tabs_button {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $neutrals_500;
+                color: $neutrals_500;
+                font-size: 0.812rem;
+                line-height: 1.45;
+                font-weight: 500;
+                &.selected_button2 {
+                    border-color: $secondary_400;
+                    color: $secondary_400;
+                }
+            }
+        }
+    }
+    .tableheader {
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $mobile) {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .main_modal{
+            .modal{
+                margin: 0px 15px;
+                .modal_content_wrapper{
+                    .confirm_message{
+                        font-size: 1rem;
+                        color: $dark;
+                        line-height: 3rem;
+                    }
+                    .add_clients_feilds{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        .input_wrapper_column{
+                            gap: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .Add_client_button {
+            background: $secondary_400;
+            font-size: 0.875rem;
+            color: $light;
+            @media only screen and (max-width: $mobile) {
+                width: fit-content;
+            }
+            button {
+                padding: 6px 10px;
+                color: inherit;
+                border: 1px solid $secondary_400;
+                border-radius: inherit;
+                font-size: 0.875rem;
+                line-height: 1.45;
+                font-weight: 500;
+                &:hover {
+                    color: $light!important;
+                    background: $secondary_400;
+                }
+                &:active{
+                    background: $secondary_400!important; 
+                }
+            }
+            &:hover {
+                background: $secondary_400;
+                color: $light;
+            }
+        }
+    }
+    .table_wrapper {
+        margin: 30px;
+        overflow: auto;
+        .table_container { 
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 0.875rem;
+                            line-height: 1.45;  
+                            text-align: left;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            font-size: 0.8rem;
+                            color: $neutrals_500;
+                            .action_toggle {
+                                .toggle_list_item{
+                                    font-size: 1rem;
+                                }
+                                .button_wrapper {                                
+                                    width: fit-content;
+                                    font-size: 0.8rem;
+                                    line-height: 1.5;
+                                    background: $light;
+                                    color: $neutrals_500;
+                                    border: 1px solid $dark;
+                                    button {
+                                        padding: 5px 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: inherit;
+                                        gap: 7px;
+                                        img {
+                                            height: 12px;
+                                            width: 12px;
+                                        }
+                                        &:active{
+                                            background: $light;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .message {
+            margin: 30px;
+            font-size: 1.2rem;
+            line-height: 1rem;
+        }
+    }
+}

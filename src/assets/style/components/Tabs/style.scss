@@ -1,0 +1,11 @@
+@import "../../common/variables";
+
+.tabs {
+    font-size: 0.812rem;
+    font-weight: 500;
+    line-height: 1;
+    .tabs_button {
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+}

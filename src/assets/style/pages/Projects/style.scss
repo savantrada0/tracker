@@ -1,0 +1,302 @@
+@import "../../common/variables";
+
+.projects {
+    .tabs_container {
+        margin: 0px 30px 30px 30px;
+        .tabs {
+            background: $light;
+            .tabs_button {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $neutrals_500;
+                color: $neutrals_500;
+                font-size: 0.812rem;
+                line-height: 1.45;
+                font-weight: 500;
+                &.selected_button2 {
+                    border-color: $secondary_400;
+                    color: $secondary_400;
+                }
+            }
+        }
+    }
+    .tableheader {
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $mobile) {
+            flex-direction: column;
+        }
+        gap: 15px;
+        .main_modal {
+            .modal {
+                margin: 0px 15px;
+                .modal_content_wrapper {
+                    .confirm_message{
+                        font-size: 1rem;
+                        color: $dark;
+                        line-height: 3rem;
+                    }
+                    .add_projects_feilds {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        label{
+                            font-size: 0.8rem;
+                            line-height: 0.8rem;
+                        }
+                        .start_end_time {
+                            display: flex;
+                            gap: 10px;
+                        }
+                        .rmdp-container {
+                            display: flex;
+                            div {
+                                div {
+                                    .rmdp-input {
+                                        height: auto;
+                                        font-size: 14px;
+                                        line-height: 1.45;
+                                        padding: 8px 14px;
+                                        width: 100%;
+                                    }
+                                    svg {
+                                        right: 12px!important;
+                                    }
+                                }
+                            }
+                        }
+                        .dropdown {
+                            height: 40px;
+                            margin-top: 3px;
+                            .dropdown_wrapper {
+                                .list_button {
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                            .selected_wrapper {
+                                overflow-y: auto;
+                                max-height: 118px;
+                                .list_button {
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    .members_feilds{
+                        .tabs_container2{
+                            margin-bottom: 20px;
+                            .tabs{
+                                background: $neutrals_200;
+                                border-radius: 20px;
+                                width: fit-content;
+                                margin: 0 auto;
+                                display: flex;
+                                .tabs_button{
+                                    border: none;
+                                    background: none;
+                                    font-size: inherit;
+                                    height: 100%;
+                                    white-space: nowrap;
+                                    border-radius: 20px;
+                                }
+                                .selected_button{
+                                    background: #FFFFFF;
+                                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                        .memberlist_wrapper {
+                            border: 1px solid $neutrals_500;
+                            border-radius: 7px;
+                            overflow: hidden;
+                            margin: 15px 0px;
+                            .memberslist {
+                                padding: 15px 15px 0px 15px;
+                                height: 126px;
+                                overflow: auto;
+                                .member{    
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    .remove_feilds {
+                                        font-size: 0.850rem;
+                                        background: transparent;
+                                        border: 1px solid $dark;
+                                        button {
+                                            padding: 6px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            svg{
+                                                height: 16px;
+                                                width: 16px;
+                                            }
+                                            &:hover {
+                                                background: $neutrals_400;
+                                            }
+                                        }
+                                    }
+                                }
+                                .remove_wrapper {
+                                    margin-bottom: 15px;
+                                    font-size: 0.875rem;
+                                }
+                            }
+                        }
+                        .search_feilds {
+                            justify-content: space-between;
+                            display: flex;
+                            align-items: center;
+                            .inputbox {
+                                max-width: 214px;
+                                input {
+                                    max-width: inherit;
+                                }
+                            }
+                            .button_wrapper {
+                                white-space: nowrap;
+                                font-size: 0.875rem;
+                                background: transparent;
+                                button {
+                                    padding: 0px;
+                                    &:active{
+                                        background: transparent;
+                                    }
+                                }
+                            }
+                            .clearall_button {
+                                color: $neutrals_500;
+                            }
+                            .selectall_button {
+                                color: $primary_500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .Add_project_button {
+            background: $secondary_400;
+            font-size: 0.875rem;
+            color: $light;
+            @media only screen and (max-width: $mobile) {
+                width: fit-content;
+            }
+            button {
+                padding: 6px 10px;
+                color: $light;
+                border: 1px solid $secondary_400;
+                border-radius: inherit;
+                font-size: 0.875rem;
+                line-height: 1.45;
+                font-weight: 500;
+                &:hover {
+                    color: $light!important;
+                    background: $secondary_400;
+                }
+                &:active {
+                    background: $secondary_400!important; 
+                }
+            }
+            &:hover {
+                background: $secondary_400;
+                color: $light;
+            }
+        }
+    }
+    .table_wrapper {
+        margin: 30px;
+        overflow: auto;
+        .table_container { 
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 0.875rem;
+                            line-height: 1.45;  
+                            text-align: left;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            color: $neutrals_500;
+                            font-size: 0.8rem;
+                            .project_name {
+                                font-size: 0.8rem;
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                .p_icon {
+                                    color: $dark;
+                                    width: 27px;
+                                    margin-right: 5px;
+                                    display: flex;
+                                    height: 27px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background: $success_600;
+                                    border-radius: 50%;
+                                    font-size: 0.9rem;
+                                }
+                            }
+                            .action_toggle {
+                                .button_wrapper {                                
+                                    width: fit-content;
+                                    font-size: 0.75rem;
+                                    line-height: 1.5;
+                                    background: $light;
+                                    color: $neutrals_500;
+                                    border: 1px solid $dark;
+                                    button {
+                                        padding: 5px 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: inherit;
+                                        gap: 7px;
+                                        img {
+                                            height: 12px;
+                                            width: 12px;
+                                        }
+                                        &:active{
+                                            background: $light;
+                                        }
+                                    }
+                                }
+                            }
+                            .addmember_button_wrapper{
+                                width: fit-content;
+                                line-height: 0px;
+                                background: transparent;
+                                border-radius: 50%;
+                                button{
+                                    border: inherit;
+                                    border-radius: inherit;
+                                    padding: 0px;
+                                    img{
+                                        width: 27px;
+                                        height: 27px;
+                                    }
+                                    &:active{
+                                        background: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .message {
+            margin: 30px;
+            font-size: 1.2rem;
+            line-height: 1rem;
+        }
+    }
+}

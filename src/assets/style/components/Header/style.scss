@@ -1,0 +1,124 @@
+@import '../../common/variables';
+
+.header {
+    position: sticky;
+    background: $light;
+    top: 0px;
+    height: 46px;
+    padding: 0 20px;
+    border-bottom: 1px solid $neutrals_200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+        padding: 0 10px;
+    }
+    .brand_logo {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        @media (max-width: $tablet) {
+            display: none;
+        }
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+    .brand_logo_profile {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+    .hamburger {
+        width: 25px;
+        height: 20px;
+        justify-content: space-around;
+        flex-flow: column nowrap;
+        display: none;
+        cursor: pointer;
+        @media (max-width: $tablet) {
+            display: flex;
+        }
+        .burger {
+            width: 25px;
+            height: 2px;
+            border-radius: 5px;
+            background-color: $dark;
+            transform-origin: 1px;
+            transition: all 0.3s linear;
+        }
+    }
+    .menubar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .menu {
+            list-style-type: none;
+            padding-right: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .icon_button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                border: none;
+                width: 25px;
+                @media (max-width: $tablet) {
+                    display: none;
+                } 
+                img {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        .menubar2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            .menu2 {
+                list-style-type: none;
+                padding-right: 10px;
+                display: flex;
+                justify-content: center;
+                .togglemenu_list{
+                    right: 6px;
+                }
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $light;
+                    border: none;
+                    width: 25px;
+                    padding: 0;
+                    img {
+                        cursor: pointer;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .menu2:last-child {
+                padding-right: 0px;
+            }
+        }
+    }
+}

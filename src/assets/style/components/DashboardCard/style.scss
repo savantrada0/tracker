@@ -1,0 +1,49 @@
+@import "../../common/variables";
+
+.activity_box {
+    padding: 0px 15px;
+    border-right: 1px solid $neutrals_100;
+    margin: 15px 0px;
+    .card_topbar {
+        display: flex;
+        padding-bottom: 15px;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .dashboardcard_title {
+            margin-bottom: 3px;
+            color: $neutrals_600;
+            font-size: 0.75rem;
+            margin: 0px;
+            font-weight: 500;
+        }
+        .menu_button {
+            align-self: center;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .main_text {
+        margin: 0px;
+        font-size: 1.625rem;
+        font-weight: 300;
+        color: $dark
+    }
+    .card_bottombar {
+        padding-top: 7px;
+        .recent_groth {
+            font-size: 0.75rem;
+        }
+    }
+    @media only screen and (max-width: $tablet) {
+        border-bottom: 1px solid $neutrals_400;
+        padding: 15px;
+        margin: 0px;
+    }
+}

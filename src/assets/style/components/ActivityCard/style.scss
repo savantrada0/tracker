@@ -1,0 +1,122 @@
+@import "../../common/variables";
+
+.activity_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 34px;
+    .project_name {
+        margin: 3px;
+        border-radius: 20px;
+        background: $neutrals_100;
+        padding: 5px 12px;
+        white-space: nowrap;
+        color: $neutrals_600;
+        font-size: 0.812rem;
+        font-weight: 500;
+    }
+    .task_name {
+        color: $neutrals_600;
+        font-size: 0.75rem;
+        margin: 5px;
+    }
+    .activity_card {
+        border: 1px solid $neutrals_600;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .screenshot_wrapper {
+            position: relative;
+            cursor: pointer;
+            .screenshot_overlay {
+                transform: translateY(-100%);
+                height: 100%;
+                transition: all 0.3s ease-in-out;
+                background: $bg1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                .view_screen_button {
+                    font-size: 12px;
+                    background: $light;
+                    color: $dark;
+                    line-height: 1.5;
+                    button {
+                        padding: 5px 20px;
+                        &:active{
+                            background: $light
+                        }
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            &:hover {
+                .screenshot_overlay {
+                    transform: translateY(0%);
+                }
+            }
+        }
+        .screen_button {
+            border-radius: 20px;
+            margin-top: -13px;
+            box-shadow: $tab_button;
+            border: none;
+            button {
+                padding: 0px 15px;
+                background: $light;
+                border-radius: inherit;
+                color: $secondary_600;
+                font-size: 0.8rem;
+                border: none;
+            }
+        }
+        .row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 7px 10px;
+            justify-content: space-between;
+            .time {
+                font-size: 0.75rem;
+                color: $neutrals_600;
+            }
+            .edit_button {
+                background: none;
+                button {
+                    line-height: 0;
+                    padding: 0;
+                    svg{
+                        height: 12px;
+                        width: 12px;
+                    }
+                }
+            }
+        }
+        .accuracy_chart {
+            background: $neutrals_200;
+            height: 4px;
+            position: relative;
+            width: 87%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 5px;
+            .accuracy_groth {
+                background: $success_600;
+                position: absolute;
+                height: 5px;
+            }
+        }
+        .accuracy_percent {
+            color: $neutrals_600;
+            font-size: 0.688rem;
+            margin: 7px;
+        }
+    }
+}

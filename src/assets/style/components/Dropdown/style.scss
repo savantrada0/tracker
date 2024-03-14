@@ -1,0 +1,177 @@
+@import "../../common/variables";
+
+.dropdown_overlay {
+    z-index: 6;
+    background: none;
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0.5;
+    height: 100%;
+}
+
+.selected_overlay {
+    z-index: 9;
+    background: none;
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0.5;
+    height: 100%;
+}
+
+.dropdown_container{
+    label {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+    .dropdown_disable {
+        .dropdown_wrapper {
+            &:hover {
+                border-color: #B9BECD;
+            }
+            .list_button {
+                border: 1px solid #B9BECD;
+                background: #F8F9FA;
+                border-radius: inherit;
+                input {
+                    background: #F8F9FA;
+                    color: #B9BECD!important;
+                }
+            }
+        }
+    }
+    .dropdown {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        .selected_wrapper {
+            overflow-y: auto;
+            max-height: 118px;
+            position: absolute;
+            z-index: 10;
+            border: 1px solid $neutrals_400;
+            border-radius: 5px;
+            overflow: auto;
+            width: 100%;
+            background: $light;
+            &:hover {
+                border-color: $dark;
+            }
+            .list_button {
+                background: none;
+                padding: 0;
+                border: none;
+                margin: 0;
+                cursor: pointer;
+                padding: 10px;
+                .top_listitem {
+                    pointer-events: none;
+                    input {
+                        outline: none;
+                        font-size: 0.875rem;
+                        color: $neutrals_600;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .list_item {
+            display: flex;
+            cursor: pointer;
+            height: 44px;
+            input[type="radio"] {
+                opacity: 0;
+                width: -webkit-fill-available;
+                outline: none;
+                border: none;
+                margin: 0px;
+                padding: 0px;
+                z-index: 3;
+                cursor: pointer;
+            }
+            .list_name {
+                display: flex;
+                justify-content: center;
+                height: inherit;
+                flex-direction: column;
+                position: absolute;
+                padding: 5px 10px;
+                font-size: 0.875rem;
+                color: $neutrals_600;
+                .list_data{
+                    font-size: 0.875rem;
+                }
+                .list_data:nth-child(2){
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .list_item_hover {
+            background: $secondary_400 !important;
+        }
+    }
+    .dropdown_wrapper {
+        position: absolute;
+        z-index: 7;
+        border: 1px solid $neutrals_400;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        background: $light;
+        &:hover {
+            border-color: $dark;
+        }
+        .list_button {
+            background: none;
+            padding: 0;
+            border: none;
+            margin: 0;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            .top_listitem {
+                pointer-events: none;
+                input {
+                    outline: none;
+                    font-size: 0.875rem;
+                    color: $neutrals_600;
+                    border: none;
+                }
+            }
+        }
+        .list_item {
+            display: flex;
+            cursor: pointer;
+            height: 38px;
+            input[type="radio"] {
+                opacity: 0;
+                width: -webkit-fill-available;
+                outline: none;
+                border: none;
+                margin: 0px;
+                padding: 0px;
+                z-index: 3;
+                cursor: pointer;
+            }
+            .list_name {
+                position: absolute;
+                padding: 10px;
+                font-size: 0.875rem;
+                color: $neutrals_600;
+            }
+        }
+        .list_item_hover {
+            background: $secondary_400 !important;
+        }
+    }
+}

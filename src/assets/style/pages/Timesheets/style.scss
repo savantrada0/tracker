@@ -1,0 +1,359 @@
+@import "../../common/variables";
+
+.timesheets {
+    background: $light;
+    height: inherit;  
+    .title {
+        @media (max-width:$tablet) {
+            .heading_2{
+                text-align: center;
+            }
+        }
+        @media (max-width:$mobile) {
+            padding: 15px;
+        }
+    }
+    .table_totaltime {
+        color: $dark;
+        margin: 10px 30px;
+        font-weight: 500;
+        line-height: 1.4;
+        font-size: 1.125rem;
+        margin-top: 30px;
+    }
+    .row1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 30px;
+        @media (max-width:$landspace) {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .rs-picker{
+            span{
+                font-size: 0.875rem;
+                color: $neutrals_700;
+            }
+        }
+        .filter_wrapper {
+            display: flex;
+            @media (max-width:$mobile) {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .dropdown{
+                .dropdown_wrapper{
+                    position: relative;
+                }
+                .selected_wrapper{
+                    width: inherit;
+                    overflow-y: auto;
+                    max-height: 118px;
+                }
+            }
+            .filter_button {
+                background: $light;
+                border: 1px solid $secondary_400;
+                color: $secondary_400;
+                font-size: 0.875rem;
+                line-height: 1.45;
+                align-self: flex-start;
+                @media (max-width:$mobile) {
+                    margin: 0px;
+                }
+                button {
+                    border-radius: inherit;
+                    padding: 9px 20px;
+                    background: inherit;
+                    font-size: inherit;
+                    border:inherit;
+                    color:inherit;
+                    line-height: inherit;
+                    &:active {
+                        background: $secondary_400;
+                    }
+                }
+                &:hover {
+                    background: $secondary_400;
+                    border: 1px solid $secondary_400;
+                    color: $light;
+                }
+            }
+            .main_drawer{
+                .drawer{
+                    .drawer_content_wrapper{
+                        .select_wrapper{
+                            .dropdown{
+                                .dropdown_wrapper{
+                                    .list_button{
+                                        width: 100%;
+                                        text-align: left;
+                                    }
+                                }
+                                .selected_wrapper{
+                                    width: 100%;
+                                    .list_button{
+                                        width: 100%;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .row {
+        display: flex;
+        margin: 15px 30px;
+        justify-content: flex-end;
+        .togglemenu {
+            position: relative;
+            display: flex;
+            .button_wrapper {
+                background: none;
+                line-height: 0px;
+                margin-right: 15px;
+                button {
+                    padding: 0px;
+                    &:active {
+                        background: none;
+                    }
+                }
+            }
+            .togglemenu_list {
+                right: 0px;
+                width: 82px;
+                margin-top: 35px;
+            }
+        }
+        .main_modal {
+            .modal {
+                .modal_content_wrapper {
+                    .add_activity_feilds {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .start_end_time {
+                            display: flex;
+                            gap: 10px;
+                            .time_selector {
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                label{
+                                    font-size: 0.8rem;
+                                    line-height: 0.8rem;
+                                }
+                            }
+                        }
+                        .rmdp-container {
+                            display: flex;
+                            div {
+                                div {
+                                    .rmdp-input {
+                                        height: auto;
+                                        font-size: 14px;
+                                        line-height: 1.45;
+                                        padding: 8px 14px;
+                                        width: 100%;
+                                    }
+                                    svg {
+                                        right: 12px!important;
+                                    }
+                                }
+                            }
+                        }
+                        .dropdown {
+                            height: 40px;
+                            margin-top: 2px;
+                            .dropdown_wrapper {
+                                .list_button {
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                            .selected_wrapper {
+                                overflow-y: auto;
+                                max-height: 118px;
+                                .list_button {
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .date_selector {
+                            margin-bottom: 2px;
+                            display: flex;
+                            flex-direction: column;
+                            label{
+                                margin-bottom: 2px;
+                                font-size: 0.8rem;
+                                line-height: 0.8rem;
+                            }
+                        }
+                        .time_error{
+                            margin-top: -9px;
+                            color: $error_500;
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+        .addtime_button {
+            background: $secondary_400;
+            border: 1px solid $secondary_400;
+            color: $light;
+            font-size: 0.875rem;
+            line-height: 1.45;
+            button {
+                padding: 9px 20px;
+                background: $secondary_400;
+                border: 1px solid $secondary_400;
+                color: $light;
+                font-size: 0.875rem;
+                line-height: 1.45;
+            }
+        }
+    }
+    .chart_container {
+        height: 50px;
+        margin: 0 30px;
+        .workchart {
+            position: relative;
+            height: 16px;
+            background: $secondary_100;
+            border-radius: 16px;
+            .task_duration {
+                position: absolute;
+                height: inherit;
+                background: $success_600;
+                border-radius: 16px;
+            }
+            .axis {
+                top: 16px;
+                background: transparent;
+                height: 6px;
+                position: absolute;
+                width: 100%;
+                .bar {
+                    background: $neutrals_600;
+                    position: absolute;
+                    width: 2px;
+                    height: inherit;
+                }
+                .bar:first-child {
+                    left: 25%;
+                }
+                .bar:nth-child(2) {
+                    left: 50%;
+                }
+                .bar:last-child {
+                    left: 75%;
+                }
+            }
+            .time_axis {
+                position: absolute;
+                width: 100%;
+                top: 23px;
+                .time {
+                    font-size: 0.875rem;
+                    color: $neutrals_500;
+                    position: absolute;
+                }
+                .time:first-child {
+                    left: 24%;
+                }
+                .time:nth-child(2) {
+                    left: 49%;
+                }
+                .time:last-child {
+                    left: 74%;
+                }
+            }
+        }
+    }
+    .table_container {
+        overflow-x: auto;
+        margin: 0 30px;
+        table {
+            thead {
+                tr {
+                    th {
+                        text-align: left;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        font-weight: 400;
+                        .range {
+                            color: $secondary_400;
+                            cursor: pointer;
+                        }
+                        .task {
+                            display: flex;
+                            span {
+                                display: flex;
+                                margin-right: 10px;
+                                height: 32px;
+                                align-items: center;
+                                justify-content: center;
+                                width: 32px;
+                                border-radius: 50%;
+                            }
+                            .task_data {
+                                font-weight: 500;
+                                h2 {
+                                    font-size: 0.875rem;
+                                    font-weight: inherit;
+                                    line-height: 0.8rem;
+                                }
+                                h2:last-child {
+                                    margin-top: 5px;
+                                }
+                                .company_name {
+                                    margin-top: 5px;
+                                    font-weight: inherit;
+                                    font-size: 0.625rem;
+                                    color: $neutrals_500;
+                                }
+                            }
+                        }
+                        .action_toggle {
+                            .button_wrapper {                                
+                                width: fit-content;
+                                font-size: 0.75rem;
+                                line-height: 1.5;
+                                background: $light;
+                                color: $dark;
+                                border: 1px solid $dark;
+                                button {
+                                    padding: 5px 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: inherit;
+                                    gap: 7px;
+                                    img {
+                                        height: 12px;
+                                        width: 12px;
+                                    }
+                                    &:active{
+                                        background: $light;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nodata_wrapper{
+        margin: 15px 30px 30px 30px;
+    }
+}

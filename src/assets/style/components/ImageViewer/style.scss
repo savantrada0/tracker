@@ -1,0 +1,73 @@
+@import "../../common/variables";
+
+.viewer_container {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    z-index: 12;
+    justify-content: center;
+    height: 100vh;
+    background: $bg1;
+    left:0;
+    .viewer_close_button {
+        top: 20px;
+        position: absolute;
+        right: 20px;
+        background: $light;
+        line-height: 0px;
+        button{
+            padding: 8px;
+            &:active{
+                background: $light;
+            }
+            svg{
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+    .carousel {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .inner {
+            white-space: nowrap;
+            transition: transform 0.3s;
+            box-shadow: $bg1;
+            img{
+                width: 80vw;
+                height: 90vh;
+            }
+        }
+        .button-arrow {
+            position: absolute;
+            line-height: 0;
+            background: $light;
+            button{
+                padding: 5px;
+                &:active{
+                    background: $light;
+                }
+                img{
+                    width: 20px;
+                }
+            }
+        }
+        .button-arrow:first-child{
+            left: 20px;
+        }
+        .button-arrow:last-child{
+            right: 20px;
+        }
+    }
+    img {
+        height: 100%;
+        @media (max-width:$image_viewer) {
+            height: auto;
+            width: 100%;
+        }
+    }
+}

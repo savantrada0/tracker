@@ -1,0 +1,169 @@
+@import "../../common/variables";
+
+.people {
+    background: $light;
+    .people_title {
+        text-align: left;
+        padding: 0;
+        margin: 30px;
+    }
+    .tableheader {
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $mobile) {   
+            flex-direction: column;
+            gap: 15px;
+        }
+        .rightside {
+            display: flex;
+            .main_modal {
+                .modal {
+                    .modal_content_wrapper {
+                        .add_member_feilds {
+                            display: flex;
+                            gap: 10px;
+                            flex-direction: column;
+                            .dropdown {
+                                height: 40px;
+                                .selected_wrapper {
+                                    overflow-y: auto;
+                                    max-height: 118px;
+                                    .list_button {
+                                        width: 100%;
+                                        text-align: left;
+                                    }
+                                }
+                                .dropdown_wrapper {
+                                    .list_button {
+                                        width: 100%;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                            .input_wrapper_column {
+                                label {
+                                    font-size: 0.800rem;
+                                    line-height: 0.8rem;
+                                }
+                                input {
+                                    line-height: 1.4rem;
+                                    font-size: 0.9rem;
+                                    padding: 3px 7px;
+                                }
+                            }
+                            .email_input_wrapper_column {
+                                label {
+                                    font-size: 0.800rem;
+                                    line-height: 0.8rem;
+                                }
+                                input {
+                                    line-height: 1.4rem;
+                                    font-size: 0.9rem;
+                                    padding: 3px 7px;
+                                }
+                            }
+                            .password_input_wrapper_column {
+                                label {
+                                    font-size: 0.800rem;
+                                    line-height: 0.8rem;
+                                }
+                                input {
+                                    line-height: 1.4rem;
+                                    font-size: 0.9rem;
+                                    padding: 3px 7px;
+                                }
+                                .password_input{
+                                    img{
+                                        top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .add_member_button {
+                margin-right: 10px;
+                background: $secondary_400;
+                button {
+                    font-size: 0.875rem;
+                    padding: 9px 20px;
+                    line-height: 1.45;
+                    font-weight: 500;
+                }
+            }
+            .filter_button {
+                background: $light;
+                button {
+                    padding: 9px 20px;
+                    color: $secondary_400;
+                    border: 1px solid $secondary_400;
+                    border-radius: inherit;
+                    font-size: 0.875rem;
+                    line-height: 1.45;
+                    font-weight: 500;
+                    &:hover {
+                        color: $light!important;
+                        background: $secondary_400;
+                    }
+                }
+            }
+        }
+    }
+    .nodata_msg_member{
+        margin: 30px;
+    }
+    .table_wrapper {
+        overflow: auto;
+        margin: 30px;
+        .table_container { 
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 0.875rem;
+                            line-height: 1.45;  
+                            text-align: left;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            color: $neutrals_500;
+                            font-size: 0.800rem;
+                            line-height: 1.45;  
+                            text-align: left;
+                            .action_toggle {
+                                .button_wrapper {                                
+                                    width: fit-content;
+                                    font-size: 0.75rem;
+                                    line-height: 1.5;
+                                    background: $light;
+                                    color: $neutrals_500;
+                                    border: 1px solid $dark;
+                                    button {
+                                        padding: 5px 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: inherit;
+                                        gap: 7px;
+                                        img {
+                                            height: 12px;
+                                            width: 12px;
+                                        }
+                                        &:active{
+                                            background: $light;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

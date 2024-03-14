@@ -1,0 +1,131 @@
+@import "../../common/variables.scss";
+
+.recentactivity_container {
+    margin: 0px 15px 30px 15px;
+    background: $light;
+    padding: 0 20px;
+    border: 1px solid $neutrals_100;
+    @media only screen and (max-width: $landspace) {
+        margin: 0px 15px 15px 15px;
+    }
+    .recentactivity_heading {
+        display: flex;
+        padding: 15px 0px;
+        justify-content: space-between;
+        img {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .recentactivity_data {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .nodata_wrapper{
+            display: flex;
+            justify-content: center;
+            svg {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        .card_container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0px;
+            @media only screen and (max-width: $tablet) {
+                grid-template-columns: 1fr;
+            }
+            .recentactivity_card_wrapper { 
+                position: relative;
+                .accuracy_data {
+                    display: block;
+                    position: absolute;
+                    z-index: 10;
+                    color: $light;
+                    background: $success_600;
+                    border-radius: 16px;
+                    font-size: 0.75rem;
+                    padding: 4px;
+                    top: -10px;
+                    right: -14px;
+                }
+                .recentactivity_card {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    overflow: hidden;
+                    img {
+                        width: inherit;
+                        z-index: 1;
+                    }
+                    &:hover {
+                        .activity_data {
+                            transform: translateY(0%);
+                        }
+                    }
+                    .activity_data {
+                        background-color: $bg1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: 5;
+                        transform: translateY(-100%);
+                        transition: transform 0.3s ease-in-out;
+                        .viewscreen_button {
+                            background: $light;
+                            color: $dark;
+                            font-size: 10px;
+                            white-space: nowrap;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            button {
+                                padding: 8px 10px;
+                                line-height: 1.5;
+                            }
+                        }
+                        .time_data {
+                            color: $light;
+                            font-size: 0.7rem;
+                            margin-top: 10px;
+                        }
+                    }
+                    .hovereffect {
+                        display: block;
+                        translate: 0%;
+                        transition: 2s all ease-in-out;
+                    }
+                }
+            }
+        }
+        .recentactivity_link {
+            padding: 15px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            a {
+                display: flex;
+                font-size: 13px;
+                align-items: center;
+                text-decoration: none;
+                color: $secondary_400;
+                img {
+                    margin-left: 5px;
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+    }
+}

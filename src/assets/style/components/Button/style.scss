@@ -1,0 +1,102 @@
+@import '../../common/variables';
+
+.button_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 1rem;
+    background: $primary_500;
+    border-color: $primary_500;
+    line-height: 25px;
+    color: $light;
+    &:hover {
+        background: $primary_600;
+        border-color: $primary_600;
+    }
+    button {
+        cursor: pointer;
+        background-color: inherit;
+        width: 100%;
+        border: none;
+        padding: 11px 18px;
+        font-size: inherit;
+        color: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        &:active {
+            background: $primary_700;
+            border-color: $primary_700;
+        }
+    }
+    &.primary {
+        background-color: $primary_500;
+        color: $light;
+        border-color: $primary_500;
+        button {
+            &:active {
+                background: $primary_700;
+                border-color: $primary_700;
+            }
+        }
+        &:hover {
+            background: $primary_600;
+            border-color: $primary_600;
+        }
+    }
+    &.secondary {
+        background: $light;
+        border: 2px solid $primary_500;
+        color: $primary_500;
+        button {
+            &:active {
+                background: $light;
+                border-color: $primary_700;
+                color: $primary_700;
+            }
+        }
+        &:hover {
+            color: $primary_600;
+            border-color: $primary_600;
+        }
+    }
+    &.text {
+        color: $primary_500;
+        border: none;
+        background: none;
+        button {
+            &:active {
+                border: none;
+                color: $primary_700;
+                background: none;
+            }
+        }
+        &:hover {
+            color: $primary_600;
+        }
+    }
+    &.small {
+        font-size: 0.875rem;
+        line-height: 22px;
+        button {
+            padding: 6px 12px;
+        }
+    }
+    &.medium {
+        font-size: 1rem;
+        line-height: 25px;
+        button {
+            padding: 12px 18px;
+        }
+    }
+    &.large {
+        font-size: 1.125rem;
+        line-height: 28px;
+        button {
+            padding: 14px 20px;
+        }
+    }
+}

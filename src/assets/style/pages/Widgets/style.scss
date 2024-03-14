@@ -1,0 +1,123 @@
+@import "../../common/variables";
+
+.widgets {
+    .widgets_container {
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        @media (max-width:$landspace){
+            display: flex;
+            flex-direction: column;
+        }
+        .left_wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            @media only screen and (max-width: $landspace) {
+                margin-left: 0px;
+            }
+            .nodata_wrapper {
+                display: flex;
+                justify-content: center;
+                svg {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+            .table_container {
+                margin: 0px 15px 30px 15px;
+                padding: 0 15px;
+                border: 1px solid $neutrals_100;
+                @media (max-width:$landspace) {
+                    margin: 0px 15px 15px 15px;
+                }
+                th {
+                    text-align: left;
+                    font-weight: 500;
+                    font-size: 13px;
+                    padding-left: 0px;
+                }
+                td {
+                    padding-left: 0px;
+                    text-align: left;
+                    .task_name{
+                        .task_icon {
+                            padding: 9px;
+                            margin-right: 5px;
+                            border-radius: 50%;
+                            display: inline-block;
+                            font-size: 0.875rem;
+                            text-align: center;
+                            width: 35px;
+                            height: 35px;
+                            font-weight: 500;
+                        }
+                        .task_title {
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                    .time_progress{
+                        .time_duration{
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .right_wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-right: 15px;
+            @media only screen and (max-width: $landspace) {
+                margin-right: 0px;
+            }
+            .nodata_wrapper {
+                display: flex;
+                justify-content: center;
+                svg {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+            .table_container {
+                margin: 0px 15px 30px 15px;
+                padding: 0px 15px;
+                border: 1px solid $neutrals_100;
+                th {
+                    text-align: left;
+                    font-weight: 500;
+                    font-size: 13px;
+                    padding-left: 0px;
+                }
+                td {
+                    padding-left: 0px;
+                    text-align: left;
+                    .task_name{
+                        .task_icon {
+                            padding: 9px;
+                            margin-right: 5px;
+                            border-radius: 50%;
+                            display: inline-block;
+                            font-size: 0.875rem;
+                            text-align: center;
+                            width: 35px;
+                            height: 35px;
+                            font-weight: 500;
+                        }
+                        .task_title {
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                    .time_progress{
+                        .time_duration{
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

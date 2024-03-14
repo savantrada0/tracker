@@ -1,0 +1,189 @@
+@import "../../common/variables";
+
+.todos {
+    .title {
+        padding: 0;
+        margin: 30px;
+    }
+    .filter_container {
+        margin: 30px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        @media only screen and (max-width: $landspace) {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .select_menus {
+            display: flex;
+            gap: 30px;
+            flex-direction: row;
+            @media only screen and (max-width: $mobile) {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .select_col {
+                gap: 4px;
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: 11px;
+                }
+                .dropdown {
+                    width: 214px;
+                    .selected_wrapper {
+                        position: absolute;
+                        overflow-y: auto;
+                        max-height: 118px;
+                    }
+                    .dropdown_wrapper {
+                        overflow-y: auto;
+                        max-height: 118px;
+                        position: relative;
+                        .list_button{
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .add_todo_wrapper {
+        align-self: flex-end;
+        @media only screen and (max-width: $landspace) {
+            align-self: flex-start;
+        }
+        .main_modal {
+            .modal {
+                .modal_content_wrapper {
+                    .title {
+                        margin: 0px 0px 10px 0px;
+                    }
+                    .add_todo_feilds {
+                        gap: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        .input_wrapper_column {
+                            font-size: 14px;
+                            gap: 0px;
+                        }
+                        .dropdown {
+                            height: 40px;
+                            margin-top: 4px;
+                            .dropdown_wrapper {
+                                .list_button {
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                            .selected_wrapper{
+                                overflow-y: auto;
+                                max-height: 118px;
+                                .list_button{
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Add_todo_button {
+        background: $secondary_400;
+        font-size: 0.875rem;
+        color: $light;
+        button {
+            padding: 6px 10px;
+            color: inherit;
+            border: 1px solid $secondary_400;
+            border-radius: inherit;
+            font-size: 0.875rem;
+            line-height: 1.45;
+            font-weight: 500;
+            &:hover {
+                color: $light!important;
+                background: $secondary_400;
+            }
+            &:active {
+                background: $secondary_400!important; 
+            }
+        }
+        &:hover {
+            background: $secondary_400;
+            color: $light;
+        }
+    }
+    .tableheader {
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $mobile) {
+            gap: 15px;
+            flex-direction: column;
+        }
+        .toggle_wrapper {
+            label {
+                font-size: 11px;
+            }
+        }
+    }
+    .table_wrapper {
+        margin: 30px;
+        overflow: auto;
+        .table_container { 
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 0.875rem;
+                            line-height: 1.45;  
+                            text-align: left;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            font-size: 0.8rem;
+                            color: $neutrals_500;
+                            .action_toggle {
+                                .toggle_list_item{
+                                    font-size: 0.8rem;
+                                }
+                                .button_wrapper {                                
+                                    width: fit-content;
+                                    font-size: 0.75rem;
+                                    line-height: 1.5;
+                                    background: $light;
+                                    color: $neutrals_500;
+                                    border: 1px solid $dark;
+                                    button {
+                                        padding: 5px 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: inherit;
+                                        gap: 7px;
+                                        img {
+                                            height: 12px;
+                                            width: 12px;
+                                        }
+                                        &:active{
+                                            background: $light;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .message {
+            margin: 30px;
+        }
+    }
+}

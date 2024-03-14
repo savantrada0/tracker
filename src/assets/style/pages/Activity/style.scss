@@ -1,0 +1,181 @@
+@import "../../common/variables";
+
+.activity {
+    background: $light;
+    .title {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width:$tablet) {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            .heading_2 {
+                text-align: center;
+            }
+        }
+        @media (max-width:$mobile) {
+            padding: 15px;
+        }
+        .tabs {
+            align-self: flex-start;
+            width: fit-content;
+            margin: 0 auto;
+            display: flex;
+            background: $neutrals_200;
+            border-radius: 20px;
+            .tabs_button {
+                border: none;
+                background: none;
+                font-size: inherit;
+                height: 100%;
+                white-space: nowrap;
+                border-radius: 20px;
+            }
+            .selected_button {
+                background: $light;
+                box-shadow: $tab_button;
+                white-space: nowrap;
+            }
+        }
+    }
+    .row1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 30px;
+        @media (max-width:$mobile) {
+            margin: 0 15px;
+        }
+        @media (max-width:$landspace) {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .date_filter_wrapper {
+            gap: 10px;
+            display: flex;
+            .prev_next_button {
+                background: $light;
+                line-height: 0px;
+                border: 1px solid $neutrals_600;
+                button {
+                    padding: 0px 9px;
+                    img {
+                        width: 15px;
+                    }
+                    &:active {
+                        background: $light;
+                    }
+                }
+            }
+        }
+        .rmdp-container {
+            max-width: 175px;
+            div {
+                div {
+                    input{
+                        margin: 0px;
+                        padding: 10px 14px;
+                        font-size: 14px;
+                        line-height: 1.45;
+                        max-width: 100%;
+                        height: auto;
+                        color: $neutrals_600;
+                        &:focus {
+                            box-shadow: $inputbox_shadow;
+                        }
+                    }
+                    svg {
+                        right: 12.5px!important;
+                    }
+                }
+            }
+        }
+        .rightside_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            @media (max-width:$mobile) {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .dropdown{
+                .dropdown_wrapper{
+                    position: relative;
+                }
+                .selected_wrapper{
+                    width: 210px;
+                    overflow-y: auto;
+                    max-height: 118px;
+                }
+            }
+            .main_drawer{
+                .selected_wrapper{
+                    width: 100%;
+                }
+            }
+            .filter_button {
+                background: $light;
+                border: 1px solid $secondary_400;
+                color: $secondary_400;
+                font-size: 0.875rem;
+                line-height: 1.45;
+                align-self: flex-start;
+                @media (max-width:$mobile) {
+                    margin: 0px;
+                }
+                button {
+                    padding: 9px 20px;
+                    background: inherit;
+                    font-size: inherit;
+                    border:inherit;
+                    color:inherit;
+                    line-height: inherit;
+                    border-radius: inherit;
+                    &:active {
+                        background: $secondary_400;
+                    }
+                }
+                &:hover {
+                    background: $secondary_400;
+                    border: 1px solid $secondary_400;
+                    color: $light;
+                }
+            }
+        }
+    }
+    .cards {
+        margin: 30px;
+        grid-column-gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        @media (max-width: $activity_cards) {
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+        }
+        @media (max-width: $mobile) {
+            margin: 15px;
+        }
+        .dashboard_card_wrapper {
+            display: grid;
+            margin:0px;
+            border-radius: 4px;
+            grid-template-columns: repeat(2,1fr);
+            border: 1px solid $neutrals_400;
+            .activity_box {
+                display: flex;
+                border-bottom: none;
+                justify-content: space-between;
+                flex-direction: column;
+                margin: 20px 0px;
+                border-right: 1px solid $neutrals_400;
+                .card_topbar {
+                    padding-bottom: 0px;
+                    margin-bottom: 20px;
+                }
+            }
+            .activity_box:last-child {
+                border: none;
+            }
+        }
+    }
+    .nodata_wrapper{
+        margin: 30px;
+    }
+}

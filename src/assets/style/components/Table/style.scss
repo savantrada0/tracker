@@ -1,0 +1,72 @@
+@import "../../common/variables";
+
+.table_container {
+    background: $light;
+    .table_heading {
+        display: flex;
+        padding: 15px 0px;
+        justify-content: space-between;
+        h2 {
+            color: $neutrals_600;
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1rem;
+        }
+        img {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .table_scroller{
+        overflow: auto;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            tr {
+                td {
+                    padding: 15px;
+                    white-space: nowrap;
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    color: $neutrals_700;
+                }
+                th {
+                    border-bottom: 1px solid $neutrals_100;
+                    padding: 15px;
+                    white-space: nowrap;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    color: $dark;
+                }
+            }
+        }
+    }
+    .progress_link {
+        padding: 15px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid $neutrals_100;
+        font-size: 0.812rem;
+        a {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $secondary_600;
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    .nodata_container {
+        display: flex;
+        justify-content: center;
+        svg {
+            width: 250px;
+            height: 250px;
+        }
+    }
+}

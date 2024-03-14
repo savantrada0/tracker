@@ -1,0 +1,116 @@
+@import "../../common/variables";
+
+.profile {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding-top: 40px;
+    @media only screen and (max-width: $tablet) {
+        max-width: 750px!important;
+        flex-direction: column;
+        margin: 0px auto!important;
+    }
+    @media only screen and (max-width: $landspace) {
+        max-width: 970px!important;
+        margin: 0px 15px;
+    }
+    @media only screen and (max-width: $signup) {
+        max-width: 1170px;
+    }
+    .leftside {
+        width: 25%;
+        padding: 0px 15px;
+        font-size: 0.875rem;
+        .user_image {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+        }
+        .change_pic_button {
+            line-height: 18px;
+            margin-top: 6px;
+            background: transparent;
+            font-size: inherit;
+            color: $secondary_400;
+        }
+        .actions_button {
+            line-height: 18px;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid $neutrals_400;
+            color: $dark;
+            font-size: inherit;
+            button{
+                &:active{
+                    background: transparent;
+                }
+            }
+        }
+        .delete_button {
+            line-height: 18px;
+            margin-top: 6px;
+            background: $error_500;
+            color: $light;
+            font-size: inherit;
+        }
+    }
+    .rightside {
+        width: 75%;
+        padding: 0px 15px;
+        .heading_2{
+            margin: 20px 0px 10px 0px;
+        }
+        .input_wrapper_column{
+            margin-bottom: 15px;
+            label{
+                font-size: 0.75rem;
+            }
+            input{
+                font-size: 0.875rem;
+                line-height: 20px;
+            }
+        }
+        .dropdown-update-profile {
+          .dropdown_wrapper {
+            position: relative !important;
+            margin-bottom: 15px;
+          }
+        }
+        .bottom_buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            .action_button {
+                font-size: 0.850rem;
+                background: $secondary_400;
+                button {
+                    padding: 7px 20px;
+                    &:active {
+                        background: transparent;
+                    }
+                }
+            }
+            .cancel_button {
+                background: $light;
+                color: $dark;
+                border: 1px solid $dark;
+                font-size: 0.850rem;
+                button {
+                    padding: 5px 14px;
+                    &:active {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+}

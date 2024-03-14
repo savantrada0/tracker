@@ -1,0 +1,100 @@
+@import "../../common/variables";
+
+.main_drawer {
+    .drawer {
+        background: $light;
+        position: fixed;
+        right: 0;
+        top: 0;
+        max-width: 340px;
+        z-index: 13;
+        height: 100%;
+        width: 100%;
+        box-shadow: $drawer_shadow;
+        transition: all 0.3s ease-in-out;
+        .drawer_content_wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 25px 30px;
+            .drawer_filter_button{
+                margin-top: 10px;
+                background: $secondary_400;
+                button{
+                    &:active{
+                        background: $secondary_400;
+                    }
+                }
+            }
+            .title {
+                font-size: 0.812rem;
+                padding: 10px 15px;
+                line-height: 1.45;
+                color: $secondary_600;
+                align-self: flex-start;
+                margin-bottom: 20px;
+                background: transparent;
+                cursor: pointer;
+                border-color: $secondary_600;
+                border-width: 0px 0px 2px 0px;
+            }
+            .select_wrapper{
+                margin-bottom: 5px;
+                height: 66px;
+                display: flex;
+                flex-direction: column;
+                label{
+                    line-height: 1.45;
+                    font-size: 11px;
+                    margin-bottom: 2px;
+                    font-size: 0.8rem;
+                    color: $neutrals_600;
+                }
+                .dropdown{
+                    justify-content: flex-start;
+                    .dropdown_wrapper{
+                        .list_button{
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                    .selected_wrapper{
+                        .list_button{
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+            .toggle_wrapper{
+                margin-bottom: 3px;
+                label{
+                    font-size: 0.8rem;
+                }
+            }
+            .close_button {
+                align-self: self-end;
+                cursor: pointer;
+                background: none;
+                border: none;
+                outline: none;
+                svg{
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+    .overlay {
+        position: fixed;
+        background: $dark;
+        left: 0;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        cursor: pointer;
+        z-index: 12;
+        opacity: 0.5;
+        height: 100%;
+    }
+}

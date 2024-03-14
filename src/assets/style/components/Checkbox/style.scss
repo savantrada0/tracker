@@ -1,0 +1,29 @@
+@import '../../common/variables';
+
+.checkbox_input_wrapper {
+    margin: 0 0 24px;
+    .input_group_checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+            label {
+                color: $primary_700;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                user-select: none;
+                line-height: 1.25;
+            }
+            a {
+                color: $primary_700;
+                font-weight: 700;
+                font-size: 0.75rem;
+                outline: none;
+                text-decoration: none;
+            }
+            input {
+                height: 16px;
+                width: 16px;
+            }
+    }
+}

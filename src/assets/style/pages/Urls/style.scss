@@ -1,0 +1,67 @@
+@import "../../common/variables";
+
+.urls {
+    .title {
+        padding: 0;
+        margin: 30px;
+    }
+    .row1{
+        margin: 0 30px;
+        @media (max-width:$mobile) {
+            margin: 0 15px;
+        }
+        .date_filter_wrapper {
+            gap: 10px;
+            display: flex;
+            .prev_next_button {
+                background: $light;
+                border: 1px solid $neutrals_600;
+                line-height: 0px;
+                button {
+                    padding: 0px 9px;
+                    img {
+                        width: 15px;
+                    }
+                    &:active {
+                        background: $light;
+                    }
+                }
+            }
+            .rmdp-container {
+                max-width: 175px;
+                div {
+                    div {
+                        input{
+                            margin: 0px;
+                            padding: 10px 14px;
+                            font-size: 14px;
+                            line-height: 1.45;
+                            max-width: 100%;
+                            height: auto;
+                            color: $neutrals_600;
+                            &:focus {
+                                box-shadow: $inputbox_shadow;
+                            }
+                        }
+                        svg {
+                            right: 12.5px!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nodata_wrapper{
+        margin: 30px;
+    }
+    .table_container {
+        overflow: auto;
+        margin: 30px;
+        th{
+            text-align: left;
+        }
+        td{
+            font-weight: 400;
+        }
+    }
+}

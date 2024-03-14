@@ -1,0 +1,130 @@
+@import "../../common/variables";
+
+.addmember {
+    background: $light;
+    margin: 30px;
+    .add_member_feilds {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: $togglemenu_shadow;
+        border-radius: 7px;
+        .remove_feilds {
+            align-self: flex-end;
+            font-size: 0.850rem;
+            background: transparent;
+            border: none;
+            button {
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:active{
+                    background: transparent;
+                }
+            }
+        }
+        .inputfeilds_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            .input_wrapper_column {
+                label {
+                    font-size: 0.800rem;
+                    line-height: 0.8rem;
+                }
+                input {
+                    line-height: 1.4rem;
+                    font-size: 0.9rem;
+                    padding: 8px 7px;
+                }
+            }
+            .email_input_wrapper_column {
+                label {
+                    font-size: 0.800rem;
+                    line-height: 0.8rem;
+                }
+                input {
+                    line-height: 1.4rem;
+                    font-size: 0.9rem;
+                    padding: 8px 7px;
+                }
+            }
+            .password_input_wrapper_column {
+                label {
+                    font-size: 0.800rem;
+                    line-height: 0.8rem;
+                }
+                input {
+                    line-height: 1.4rem;
+                    font-size: 0.9rem;
+                    padding: 8px 7px;
+                }
+                .password_input {
+                    img {
+                        top: 5px;
+                    }
+                }
+            }
+        }
+        .dropdown_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            .dropdown_container{
+                max-width: 200px;
+                width: 100%;
+                .dropdown {
+                    width: 199px;
+                    margin-top: 4px;
+                    .selected_wrapper {
+                        overflow-y: auto;
+                        max-height: 118px;
+                        position: absolute;
+                        overflow-x: hidden;
+                    }
+                    .dropdown_wrapper {
+                        position: relative;
+                        overflow-x: hidden;
+                    }
+                }
+            }
+        }
+        .add_feilds {
+            align-self: flex-end;
+            font-size: 0.850rem;
+            button {
+                padding: 5px 14px;
+            }
+        }
+    }
+    .bottom_buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        .action_button {
+            font-size: 0.850rem;
+            background: $secondary_400;
+            button {
+                padding: 5px 14px;
+                &:active {
+                    background: transparent;
+                }
+            }
+        }
+        .cancel_button {
+            background: $light;
+            color: $dark;
+            border: 1px solid $dark;
+            font-size: 0.850rem;
+            button {
+                padding: 5px 14px;
+                &:active {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

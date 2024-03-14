@@ -1,0 +1,54 @@
+@import "../../common/variables";
+
+.table_container {
+    overflow: auto;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            tr {
+                td {
+                    border-top: 1px solid $neutrals_100;
+                    padding: 15px;
+                    white-space: nowrap;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    .table_toggle{
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+                        svg{
+                            width: 19px;
+                            height: 19px;
+                        }
+                    }
+                    .icon {
+                        width: 12px;
+                        margin-right: 6px;
+                    }
+                    .url_wrapper {
+                        font-size: 0.8rem;
+                        max-width: 170px;
+                        overflow: hidden;
+                        display: block;
+                        padding: 0px;
+                        text-overflow: ellipsis;
+                        a{
+                            font-size: inherit;
+                            text-decoration: none;
+                            color: $secondary_400;
+                        }
+                    }
+                }
+                th {
+                    border-bottom: 1px solid $neutrals_100;
+                    padding: 15px;
+                    white-space: nowrap;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    .url_title{
+                        font-size: 0.81rem;
+                    }
+                }
+            }
+        }
+}

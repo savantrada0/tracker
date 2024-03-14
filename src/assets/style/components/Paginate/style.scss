@@ -1,0 +1,62 @@
+@import "../../common/variables";
+
+.pagination_container {
+    display: flex;
+    margin: 30px;
+    gap: 5px;
+    .pagination {
+        list-style: none;
+        display: flex;
+        gap: 5px;
+        align-self: flex-start;
+        .page_number {
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px 10px;
+            height: fit-content;
+            &:hover{
+                background: $neutrals_200;
+            }
+            img {
+                width: 12px;
+            }
+            &:first-child{
+                width: 29px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+            &:last-child{
+                width: 29px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+        }
+    }
+    .dropdown {
+        max-width: 98px;
+        width: 100%;
+        .selected_wrapper {
+            position: relative;
+            overflow-x: hidden;
+            .list_item {
+                align-items: center;
+                height: 29px;
+            }
+            .list_button {
+                padding: 5px 10px;
+            }
+        }
+        .dropdown_wrapper{
+            position: relative;
+            .list_button {
+                padding: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import "../../common/variables";
+
+.home {
+    background: $neutrals_50;
+    min-height: calc(100vh - 46px);
+    .dashboard_card_wrapper {
+        border: 1px solid $neutrals_100;
+        grid-template-columns: repeat(4, 1fr);
+        width: -webkit-fill-available;
+        display: grid;
+        margin: 0px 30px 30px 30px;
+        background: $light;
+        @media only screen and (max-width: $landspace) {
+            margin: 15px;
+        }
+        @media only screen and (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+        .activity_box:last-child {
+            @media only screen and (max-width: $tablet) {
+                border: none;
+            }
+        }
+        @media only screen and (min-width: $tablet) and (max-width: $landspace) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .activity_box:nth-child(2n) {
+            @media only screen and (min-width: $tablet) and (max-width: $landspace) {
+                border: none;
+            }
+        }
+        .activity_box:nth-child(4n) {
+            @media only screen and (min-width: $signup) {
+                border: none;
+            }
+        }
+        @media only screen and (max-width: $signup) and (min-width:$landspace) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .activity_box:nth-child(3n) {
+            @media only screen and (max-width: $signup) and (min-width: $landspace) {
+                border: none;
+            }
+        }
+    }
+    .datatables {
+        @media (max-width:$landspace){
+            display: flex;
+            flex-direction: column;
+        }
+        .table_container {
+            overflow-x: auto;
+            margin: 0px 30px 30px 30px;
+            padding: 0 20px;
+            border: 1px solid $neutrals_100;
+            @media (max-width:$landspace) {
+                margin: 0px 15px 15px 15px;
+            }
+            table {
+                width: 100%;
+                th {
+                    text-align: left;
+                }
+                td {
+                    font-weight: 400;
+                    font-size: 0.812rem;
+                    .task {
+                        display: flex;
+                        .logo {
+                            display: flex;
+                            margin-right: 10px;
+                            height: 32px;
+                            align-items: center;
+                            justify-content: center;
+                            width: 32px;
+                            border-radius: 50%;
+                        }
+                        .project_name {
+                            font-weight: 400;
+                            align-self: center;
+                            font-size: 0.812rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .title1 {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width:$landspace){
+            padding: 15px 15px 0px 15px;
+        }
+        span {
+            color: $neutrals_600;
+            font-size: 0.812rem;
+            font-weight: 400;
+            line-height: 15px;
+        }
+    }
+}
